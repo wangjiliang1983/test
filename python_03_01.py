@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+from collections import defaultdict
 tup = 4, 5, 6
 print("tup = 4, 5, 6 is:",tup)
 
@@ -90,3 +91,33 @@ print(ret)
 print(d1)
 print(d1.keys())
 print(list(d1.values()))
+
+d1.update({'b': 'foo', 'c' : 12})
+print(d1)
+
+mapping = {}
+#for key, value in zip(key_list, value_list):
+#    mapping[key] = value
+#print(mapping)
+mapping = dict(zip(range(5),reversed(range(5))))
+print(mapping)
+
+words = ['apple', 'bat', 'bar', 'atom', 'book']
+by_letter = {}
+for word in words:
+    letter = word[0]
+    if letter not in by_letter:
+        by_letter[letter] = [word]
+    else:
+        by_letter[letter].append(word)
+print(by_letter)
+
+by_letter1 = {}
+for word in words:
+    letter = word[0]
+    by_letter1.setdefault(letter,[]).append(word)
+print("by_letter1 is ", by_letter1)
+by_letter2 = {}
+#by_letter2 = defaltdict(list)
+#for word in words:
+#    by_letter2[word[0]].append(word)
