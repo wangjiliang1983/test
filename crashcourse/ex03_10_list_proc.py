@@ -1,0 +1,12 @@
+mountain_list = ['Everist', 'Qirimazat', 'King', 'Queen', 'Lizars']
+print(mountain_list)
+print(len(mountain_list))
+print(sorted(mountain_list))
+print(sorted(mountain_list,reverse=True))
+print(mountain_list)
+mountain_list.sort()
+print(mountain_list)
+mountain_list.sort(reverse=True)
+print(mountain_list)
+mountain_list.reverse()
+print(mountain_list)
